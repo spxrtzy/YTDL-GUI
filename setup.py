@@ -2,7 +2,7 @@ from setuptools import setup
 
 APP=["main.py"]
 OPTIONS= {
-    'iconfile':'iconapp.icns',
+    'iconfile':'ytdl.icns',
     'argv_emulation': True,
 }
 
