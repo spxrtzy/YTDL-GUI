@@ -31,7 +31,7 @@ class UI(QWidget):
         self.currentprogress.setText(self.currentprogressstr)
         self.currentprogress.move(210, 420)
 
-        fullpath = '/Users/aliosm0719/Library/ping.mp4'
+        fullpath = 'ping.mp4'
         self.player = QMediaPlayer()
         self.audio_output = QAudioOutput()
         self.player.setAudioOutput(self.audio_output)
@@ -39,7 +39,7 @@ class UI(QWidget):
         self.audio_output.setVolume(50)
     
     def browse(self):
-        filepath = QFileDialog.getExistingDirectory(self, 'Open File', 'Users/aliosm0719')
+        filepath = QFileDialog.getExistingDirectory(self, 'Open File', '/Users')
         self.pathinp.setText(filepath)
         self.filepathstr = self.pathinp.text()
     
@@ -67,7 +67,6 @@ class UI(QWidget):
 
         ydl_opts = {
                 'outtmpl':savepath + '/' + customfilename + '.%(ext)s',
-                'ffmpeg_location' : '/Users/aliosm0719/Library/Python/3.8/bin/',
                 'progress_hooks': [self.my_hook],
         }
         
@@ -99,6 +98,3 @@ def CallWin():
     app.exec()
 
 CallWin()
-
-#https://www.reddit.com/r/funny/comments/xevn6b/creative_credit_card/
-#https://www.pornhub.com/view_video.php?viewkey=ph5d37803a15769
